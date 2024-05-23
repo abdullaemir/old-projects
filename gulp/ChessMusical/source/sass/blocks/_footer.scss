@@ -1,0 +1,131 @@
+.footer {
+	position: relative;
+	padding: 45px 0 20px;
+	background-color: #1a1a1a;
+	@media (min-width: 992px) {
+		padding-bottom: 40px;
+	}
+	&__wrapper {
+		display: flex;
+		flex-direction: column-reverse;			
+		@media (min-width: 992px) {
+			flex-direction: row;
+		}
+		&:not(:first-child) {
+			@media (min-width: 992px) {
+				margin-top: 40px;
+				align-items: flex-end;
+			}
+		}
+	}
+	&__logo {
+		position: absolute;
+		bottom: 40px;
+		right: 30px;
+		@media (min-width: 992px) {
+			position: relative;
+			bottom: auto;
+			right: auto;
+			height: 25px;
+		}
+	}
+	&__nav {
+		margin-top: 30px;
+		@media (min-width: 576px) {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		@media (min-width: 992px) {
+			margin: 0 0 0 70px;
+		}
+	}
+	&__link {
+		display: block;
+		margin: 10px 40px 0 0;
+		font-weight: 300;
+		font-size: 16px;
+		color: #ffffff;
+		transition: all 0.3s linear;
+		@media (min-width: 576px) {
+			margin-top: 0;
+			font-size: 14px;
+		}
+		&:first-child {
+			margin-top: 0;
+			@media (min-width: 576px) {
+				margin-bottom: 15px;
+			}
+		}
+		&:nth-of-type(1),
+		&:nth-of-type(4) {
+			@media (min-width: 576px) {
+				width: 180px;
+			}
+		}
+		&:hover {
+			text-decoration: none;
+			color: $main-color;
+		}
+	}
+	&__break {
+		flex-basis: 100%;
+	}
+	&__social {
+		display: flex;
+		@media (min-width: 992px) {
+			margin-left: auto;
+		}
+		&-link {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 40px;
+			width: 40px;
+			margin-right: 35px;
+			border-radius: 50%;
+			border: 1px solid $main-color;
+			background-color: $main-color;
+			transition: all 0.3s linear;
+			@media (min-width: 992px) {
+				margin: 0 0 0 35px;
+			}
+			&:hover {
+				text-decoration: none;
+				background-color: #1a1a1a;
+				span {
+					color: $main-color;
+				}
+			}
+			span {
+				font-size: 20px;
+				color: #ffffff;
+				transition: all 0.3s linear;
+			}
+		}
+	}
+	&__copyright {
+		margin-top: 30px;
+		font-weight: 300;
+		font-size: 12px;
+		color: #585858;
+		@media (min-width: 992px) {
+			margin-top: 0;
+		}
+		span {
+			margin-right: 20px;
+			font-weight: 200;
+			font-size: 42px;
+			color: #585858;
+		}
+	}
+	&__images {
+		display: none;
+		@media (min-width: 992px) {
+			display: block;
+			margin-left: auto;
+		}
+	}
+	&__image {
+		margin-left: 10px;
+	}
+}

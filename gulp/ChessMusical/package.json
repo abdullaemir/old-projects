@@ -1,0 +1,35 @@
+{
+  "name": "ChessMusical",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "dev": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abdullaeff/ChessMusical"
+  },
+  "author": "Amir Abdullaeff",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdullaeff/ChessMusical/issues"
+  },
+  "homepage": "https://github.com/abdullaeff/ChessMusical#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ]
+}

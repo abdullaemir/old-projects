@@ -1,0 +1,149 @@
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.modal {
+    display: none;
+    width: 1040px;
+    min-height: 655px;
+    padding: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #111111;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+    &__close {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        border: none;
+        background-color: transparent;
+        font-size: 41px;
+        line-height: 21px;
+        color: #b9b9b9;
+        cursor: pointer;
+        &:focus {
+            outline: none;
+        }
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 60px;
+    }
+    &-calendar {
+        display: none;
+        &.active {
+            display: flex;
+            flex-wrap: wrap;
+            width: 480px;
+        }
+        &__cell {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 42px;
+            width: 42px;
+            &:nth-child(-n+7) {
+                margin-bottom: 15px;
+                font-size: 14px;
+                color: #585858;
+            }
+            &:not(:nth-child(-n+7)) {
+                margin-bottom: 30px;
+                cursor: pointer;
+                transition: all 0.3s linear;
+                &:hover {
+                    background-color: $main-color;
+                    &.sale:after {
+                        background-color: #ffffff;
+                    }
+                }
+                &.sale:after {
+                    content: "";
+                    position: absolute;
+                    top: 4px;
+                    right: 4px;
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 50%;
+                    background-color: $main-color;
+                    transition: all 0.3s linear;
+                }
+            }
+            &:not(:nth-child(7n)) {
+                margin-right: 30px;
+            }
+        }
+    }
+    &-card {
+        width: 240px;
+        padding: 50px 35px;
+        background-color: $main-color;
+        &__day {
+            display: block;
+            font-weight: 100;
+            font-size: 100px;
+            line-height: 100%;
+            text-align: center;
+        }
+        &__week {
+            display: block;
+            font-family: 'Cormorant Garamond', sans-serif;
+            font-size: 20px;
+            text-align: center;
+        }
+        &__time {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+            border: 1px solid #ffffff;
+            font-weight: 500;
+            font-size: 18px;
+            color: #ffffff;
+            transition: all 0.3s linear;
+            &:hover {
+                background-color: #ffffff;
+                text-decoration: none;
+                color: $main-color;
+                &.sale:after {
+                    background-image: url("../icons/tickets/sale_hover.svg");
+                }
+            }
+            &:first-of-type {
+                margin-top: 45px;
+            }
+            &:last-of-type {
+                margin-top: 35px;
+            }
+            &.sale:after {
+                content: "";
+                position: absolute;
+                top: -8px;
+                right: 0;
+                width: 18px;
+                height: 24px;
+                background-image: url("../icons/tickets/sale.svg");
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                transition: all 0.3s linear;
+                @media (min-width: 420px) {
+                    right: 6px;
+                }
+            }
+        }
+    }
+    .tickets-tabs {
+        margin-top: 0;
+    }
+}

@@ -1,0 +1,12 @@
+.u {
+  &-fit-content {
+    width: fit-content; // TODO: Не работает в IE
+  }
+
+  &-wide {
+    padding: 0 $container-padding;
+    margin: 0 (-$container-padding);
+
+    // TODO: Добавить брейкпоинты
+  }
+}

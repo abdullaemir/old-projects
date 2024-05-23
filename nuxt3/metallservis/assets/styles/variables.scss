@@ -1,0 +1,68 @@
+// Colors
+$white: #ffffff;
+$gray: #f5f5f5;
+$black: #000000;
+$red: #ff002e;
+$blue: #0154e2;
+$blue-dark: #001e51;
+
+// Gradients
+$gradient: linear-gradient(144deg, #005eff 0%, #0044b8 26.5%, #005de8 62%, #003fa9 100%);
+$gradient-dark: linear-gradient(144deg, #00358f 0%, #001e51 100%);
+
+// Positioning
+$z-index-popup: 10;
+$z-index-overlay: 20;
+$z-index-modal: 30;
+
+// Borders
+$border-width: 3px;
+$border-style: solid;
+$border-color: $gray;
+
+// Backgrounds
+$background-color-white: $white;
+$background-color-gray: $gray;
+
+// Text
+$text-color-white: $white;
+$text-color-gray: rgba($black, 0.3);
+$text-color-black: $black;
+$text-font-family: "ALS Hauss VF", sans-serif;
+$text-line-height: 1.15;
+
+// Transitions
+$transition-duration: 0.2s;
+$transition-timing-function: ease-in-out;
+
+// Container
+$container-max-width: 1480px;
+$container-padding: 20px;
+$container-extended-content-max-width: 1074px;
+
+// Caption
+$caption-color: $text-color-gray;
+
+// Link
+$link-color-blue: $blue;
+
+// Button
+$button-background-color: transparent;
+$button-color-disabled: rgba($text-color-black, 0.12);
+
+// Popup
+$popup-border-width: 2px;
+$popup-border-radius: 18px;
+$popup-background-color: $background-color-white;
+$popup-box-shadow: 0 13px 9.5px 0 rgba($black, 0.04), 0 33px 24px 0 rgba($black, 0.03),
+  0 4px 4px 0px rgba($black, 0.03);
+
+// Overlay
+$overlay-background-color: rgba(#131313, 0.5);
+
+// Modal
+$modal-background-color: $white;
+
+// Tabs
+$tabs-border-radius: 12px;
+$tabs-background-color-active: rgba($blue, 0.08);

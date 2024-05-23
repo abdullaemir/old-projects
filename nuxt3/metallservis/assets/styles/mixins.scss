@@ -1,0 +1,114 @@
+@use "sass:map";
+@use "sass:string";
+
+// Breakpoints
+$breakpoints: (
+  "mobile": 375px,
+  "mobile-extra": 425px,
+  "tablet": 768px,
+  "laptop": 1024px,
+  "desktop": 1440px,
+  "tv": 1920px,
+);
+
+@mixin breakpoint($device, $mobile-first: true) {
+  $breakpoint: map.get($breakpoints, $device) - if($mobile-first, 0, 1);
+
+  @media (if($mobile-first, min-width, max-width): $breakpoint) {
+    @content;
+  }
+}
+
+// Gradient
+@mixin gradient() {
+  @include hover() {
+    color: $blue;
+  }
+
+  @include active() {
+    color: $blue-dark;
+  }
+}
+
+// Border TODO: Добавить возможность добавлять границы частично
+@mixin border($width: $border-width, $style: $border-style, $color: $border-color) {
+  border-width: $width;
+  border-style: $style;
+  border-color: $color;
+}
+
+// Text
+$text: (
+  "XXS": (
+    "font-size": 14px,
+    "font-weight": 400,
+    "letter-spacing": -0.28px,
+  ),
+  "XS": (
+    "font-size": 16px,
+    "font-weight": 400,
+    "letter-spacing": -0.32px,
+  ),
+  "S": (
+    "font-size": 18px,
+    "font-weight": 400,
+    "letter-spacing": -0.36px,
+  ),
+  "M": (
+    "font-size": 21px,
+    "font-weight": 400,
+    "letter-spacing": -0.42px,
+  ),
+  "L": (
+    "font-size": 24px,
+    "font-weight": 400,
+    "letter-spacing": -0.48px,
+  ),
+  "XL": (
+    "font-size": 32px,
+    "font-weight": 500,
+    "letter-spacing": -1.28px,
+  ),
+);
+
+@mixin text($size, $font-size: null, $font-weight: null, $letter-spacing: null) {
+  $properties: map.get($text, $size);
+
+  font-size: if($font-size, $font-size, map.get($properties, "font-size"));
+  font-weight: if($font-weight, $font-weight, map.get($properties, "font-weight"));
+  letter-spacing: if($letter-spacing, $letter-spacing, map.get($properties, "letter-spacing"));
+}
+
+// Transition
+@mixin transition(
+  $duration: $transition-duration,
+  $property: all,
+  $timing-function: $transition-timing-function,
+  $reset: false
+) {
+  @if $reset {
+    transition: none;
+  } @else {
+    transition-duration: $duration;
+    transition-property: $property;
+    transition-timing-function: $timing-function;
+  }
+}
+
+// Hover
+@mixin hover() {
+  &:hover {
+    @media (any-pointer: fine) {
+      @content;
+    }
+  }
+}
+
+// Active
+@mixin active() {
+  &:active {
+    @media (any-pointer: fine) {
+      @content;
+    }
+  }
+}

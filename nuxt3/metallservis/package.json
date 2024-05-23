@@ -1,0 +1,38 @@
+{
+  "name": "metallservis",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "lint": "concurrently -g npm:lint:*",
+    "lint:prettier": "prettier --ignore-path .gitignore --loglevel warn -w .",
+    "lint:styles": "stylelint -i .gitignore --fix ./**/*.{vue,scss}",
+    "lint:svg": "svgo -rf ./assets/images/",
+    "postinstall": "nuxt prepare",
+    "start": "node ./.output/server/index.mjs"
+  },
+  "devDependencies": {
+    "@nuxtjs/fontaine": "^0.4.0",
+    "@nuxtjs/html-validator": "^1.5.0",
+    "@nuxtjs/i18n": "8.0.0-beta.13",
+    "@pinia/nuxt": "^0.4.11",
+    "@vueuse/nuxt": "^10.2.1",
+    "concurrently": "^8.2.0",
+    "modern-css-reset": "^1.4.0",
+    "nuxt": "^3.5.2",
+    "pinia": "^2.1.6",
+    "postcss-html": "^1.5.0",
+    "postcss-scss": "^4.0.6",
+    "prettier": "^2.8.8",
+    "sass": "^1.63.6",
+    "stylelint": "^15.10.1",
+    "stylelint-config-idiomatic-order": "^9.0.0",
+    "stylelint-config-prettier-scss": "^1.0.0",
+    "stylelint-config-recommended-scss": "^12.0.0",
+    "stylelint-config-recommended-vue": "^1.5.0",
+    "svgo": "^3.0.2"
+  },
+  "overrides": {
+    "vue": "latest"
+  }
+}

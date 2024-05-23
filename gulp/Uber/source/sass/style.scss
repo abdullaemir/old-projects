@@ -1,0 +1,43 @@
+@import 'libs/bootstrap-reboot.min';
+@import 'libs/bootstrap-grid.min';
+@import 'base/variables';
+@import 'base/mixines';
+* {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}
+header {
+    position: relative;
+	height: 50px;
+}
+nav {
+    position: fixed;
+	width: 100%;
+	height: 50px;
+	background-color: #212121;
+	z-index: 5;
+}
+.hamburger {
+    display: none;
+}
+footer {
+	padding: 14px 23px 39px;
+	a {
+		&:hover {
+            text-decoration: none;
+        }
+    }
+}
+@import 'blocks/title';
+@import 'blocks/subtitle';
+@import 'blocks/label';
+@import 'blocks/menu';
+@import 'blocks/subheader';
+@import 'blocks/promo';
+@import 'blocks/reasons';
+@import 'blocks/mobile';
+@import 'blocks/choice';
+@import 'blocks/require';
+@import 'blocks/world';
+@import 'blocks/footer';
+@import 'base/media';

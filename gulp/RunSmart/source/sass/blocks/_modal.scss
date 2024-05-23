@@ -1,0 +1,63 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba($color: #000000, $alpha: .56);
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    width: 380px;
+    min-height: 400px;
+    padding: 40px;
+    background-color: #f2f2f2;
+    @media (max-width: 576px) {
+        width: 100%;
+        top: auto;
+        left: 0;
+        bottom: 0;
+        transform: translate(0);
+    }
+    &__close {
+        position: absolute;
+        top: 0;
+        right: -40px;
+        font-size: 41px;
+        line-height: 21px;
+        color: $main-color;
+        cursor: pointer;
+        @media (max-width: 576px) {
+            top: 10px;
+            right: 10px;
+            font-size: 31px;
+        }
+    }
+    &__subtitle {
+        color: #0d0d0d;
+        font-size: 18px;
+        font-weight: 700;
+        text-align: center;
+    }
+    &__descr {
+        color: #0d0d0d;
+        font-size: 14px;
+        font-weight: 500;
+        text-align: center;
+    }
+    &_mini {
+        min-height: 140px;
+    }
+    input.error {
+        border: 1px solid red;
+    }
+    label.error {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+}

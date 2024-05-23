@@ -1,0 +1,83 @@
+@use "sass:map";
+
+// Media query
+@mixin media-query($size, $mobile-first) {
+  $breakpoint: map.get($breakpoints, $size) - if($mobile-first, 0, 1);
+
+  @media (if($mobile-first, min-width, max-width): $breakpoint) {
+    @content;
+  }
+}
+
+// Mobile
+@mixin mobile($mobile-first: true) {
+  @include media-query($size: "mobile", $mobile-first: $mobile-first) {
+    @content;
+  }
+}
+
+// Tablet
+@mixin tablet($mobile-first: true) {
+  @include media-query($size: "tablet", $mobile-first: $mobile-first) {
+    @content;
+  }
+}
+
+// Laptop
+@mixin laptop($mobile-first: true) {
+  @include media-query($size: "laptop", $mobile-first: $mobile-first) {
+    @content;
+  }
+}
+
+// Desktop
+@mixin desktop($mobile-first: true) {
+  @include media-query($size: "desktop", $mobile-first: $mobile-first) {
+    @content;
+  }
+}
+
+// TV
+@mixin tv($mobile-first: true) {
+  @include media-query($size: "tv", $mobile-first: $mobile-first) {
+    @content;
+  }
+}
+
+@mixin textQ($font-size, $font-weight, $letter-spacing) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  letter-spacing: $letter-spacing;
+}
+
+@mixin text-xxsmall($font-size: 21px, $font-weight: 400, $letter-spacing: -0.02em) {
+  @include textQ(
+    $font-size: $font-size,
+    $font-weight: $font-weight,
+    $letter-spacing: $letter-spacing
+  );
+}
+
+@mixin text-small($font-size: 21px, $font-weight: 400, $letter-spacing: -0.02em) {
+  @include textQ(
+    $font-size: $font-size,
+    $font-weight: $font-weight,
+    $letter-spacing: $letter-spacing
+  );
+}
+
+@mixin text-medium($font-size: 24px, $font-weight: 400, $letter-spacing: -0.04em) {
+  @include textQ(
+    $font-size: $font-size,
+    $font-weight: $font-weight,
+    $letter-spacing: $letter-spacing
+  );
+}
+
+@mixin text-large($font-size: 32px, $font-weight: 500, $letter-spacing: -0.04em) {
+  @include textQ(
+    $font-size: $font-size,
+    $font-weight: $font-weight,
+    $letter-spacing: $letter-spacing
+  );
+}

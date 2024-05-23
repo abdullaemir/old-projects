@@ -1,0 +1,52 @@
+.sensation {
+	padding: 40px 0;
+	@media (min-width: 1200px) {
+		padding: 55px 0 90px;
+		background-image: url(../img/sensation/background.png);
+		background-position: top 55px left calc((100vw - 1040px) / 2);
+		background-repeat: no-repeat;
+	}
+	&__wrapper {
+		@media (min-width: 1200px) {
+			width: 615px;
+			margin-left: auto;
+		}
+	}
+	&__heading {
+		margin-bottom: 0;
+		text-transform: uppercase;
+		line-height: 110%;
+		font-size: 30px;
+		@media (min-width: 768px) {
+			font-size: 36px;
+		}
+		span {
+			display: block;
+			font-weight: 400;
+			color: $main-color;
+		}
+	}
+	&__text {
+		margin: 20px 0 0;
+		font-size: 13px;
+		font-weight: 300;
+		line-height: 169%;
+		color: #e5e5e5;
+	}
+	&__button {
+		margin-top: 40px;
+		padding: 8px 15px;
+		border: 1px solid $main-color;
+		background-color: $main-color;
+		text-transform: uppercase;
+		font-weight: 500;
+		font-size: 14px;
+		color: #ffffff;
+		transition: 0.4s all linear;
+		&:hover {
+			border-color: #ffffff;
+			background-color: #ffffff;
+			color: $main-color;
+		}
+	}
+}
