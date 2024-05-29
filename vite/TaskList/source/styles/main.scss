@@ -1,0 +1,37 @@
+// Base
+@import "./base/reset.scss";
+@import "./base/fonts.scss";
+@import "./base/variables.scss";
+
+// Mixins
+@import "./mixins/scrollbar.scss";
+@import "./mixins/transition.scss";
+
+// Blocks
+@import "@/blocks/button/styles/button.scss";
+@import "@/blocks/checkbox/styles/checkbox.scss";
+@import "@/blocks/todo/styles/todo.scss";
+
+@keyframes main-background-animation {
+  0% {
+    background-size: 70%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+
+body {
+  background-image: radial-gradient(50% 50% at 50% 50%, #252e42 0%, #161c2e 100%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #161c2e;
+  font-family: "Montserrat", sans-serif;
+  color: $text-color-primary;
+  animation-duration: 1.8s;
+  animation-name: main-background-animation;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+

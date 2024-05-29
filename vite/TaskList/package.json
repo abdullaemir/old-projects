@@ -1,0 +1,22 @@
+{
+  "name": "task-list",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint:prettier": "prettier --write ./source/",
+    "lint:stylelint1": "stylelint ./source/styles/main.scss --fix",
+    "lint:stylelint2": "stylelint ./source/blocks/button/styles/button.scss --fix",
+    "lint:stylelint3": "stylelint ./source/styles/base/variables.scss --fix"
+  },
+  "devDependencies": {
+    "postcss-scss": "^4.0.6",
+    "prettier": "2.8.7",
+    "sass": "^1.60.0",
+    "stylelint": "^15.4.0",
+    "stylelint-config-recommended": "^11.0.0",
+    "stylelint-scss": "^4.6.0",
+    "vite": "^4.2.1"
+  }
+}
