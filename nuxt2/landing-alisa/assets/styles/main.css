@@ -1,0 +1,18 @@
+@import "./helpers/container.css";
+@import "./helpers/visually-hidden.css";
+@import "./services/box-sizing.css";
+@import "./services/fonts.css";
+@import "./services/optimizer.css";
+@import "./variables/variables.css";
+@import "./libs/swiper.css";
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  color: var(--text-color-primary);
+}
+
+body.non-scrollable {
+  overflow-y: hidden;
+}

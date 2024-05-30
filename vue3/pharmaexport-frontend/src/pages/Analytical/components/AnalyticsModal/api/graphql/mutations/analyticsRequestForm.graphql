@@ -1,0 +1,19 @@
+mutation (
+  $agreement: Boolean!,
+  $company_country: String!,
+  $company_name: String!,
+  $email: String!,
+  $job_title: String!,
+  $name: String!,
+  $phone: String!
+) {
+  analyticsRequestForm(
+    agreement: $agreement,
+    company_country: $company_country,
+    company_name: $company_name,
+    email: $email,
+    job_title: $job_title,
+    name: $name,
+    phone: $phone
+  )
+}

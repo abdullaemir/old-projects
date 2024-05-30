@@ -1,0 +1,3 @@
+fragment GoodDosageFormFields on GoodDosageForm {
+  dosage_form
+}

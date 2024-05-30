@@ -1,0 +1,20 @@
+body {
+  height: 100vh;
+  margin: 0;
+}
+
+ol, ul {
+  list-style-type: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

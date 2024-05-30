@@ -1,0 +1,10 @@
+.breadcrumb {
+  --breadcrumb-margin-bottom-mobile: 4px;
+  --breadcrumb-margin-bottom-desktop: 8px;
+  --breadcrumb-font-weight: 500px;
+  --breadcrumb-font-size: 12px;
+  --breadcrumb-color: #647c9f;
+  --breadcrumb-color-hover: #6b7886;
+  --breadcrumb-color-active: #647c9f;
+  --breadcrumb-fill: #647c9f;
+}

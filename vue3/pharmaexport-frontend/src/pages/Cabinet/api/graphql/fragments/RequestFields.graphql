@@ -1,0 +1,3 @@
+fragment RequestFields on Request {
+  id
+}

@@ -1,0 +1,3 @@
+mutation ($utm_source: String, $utm_medium: String, $utm_campaign: String) {
+  userUtm(utm_source: $utm_source, utm_medium: $utm_medium, utm_campaign: $utm_campaign)
+}

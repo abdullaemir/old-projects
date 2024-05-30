@@ -1,0 +1,13 @@
+mutation (
+  $type: String!
+)
+{
+  sendPurchaseRequest (
+    type: $type
+  ){
+    ctdDossier {
+      id,
+      product_name
+    }
+  }
+}

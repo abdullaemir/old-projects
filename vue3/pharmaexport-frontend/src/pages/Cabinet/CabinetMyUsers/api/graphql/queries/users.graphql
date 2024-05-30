@@ -1,0 +1,7 @@
+#import "~/api/graphql/fragments/UserFields.graphql"
+
+query ($limit: Int, $offset: Int, $orderBy: [OrderByInput]) {
+  users(limit: $limit, offset: $offset, orderBy: $orderBy) {
+    ...UserFields
+  }
+}

@@ -1,0 +1,13 @@
+.notification__container {
+  --notification-z-index: var(--z-index-notification);
+  --notification-border-width: 1px;
+  --notification-border-color: transparent;
+  --notification-border-radius: 4px;
+  --notification-font-weight: 600;
+  --notification-font-size: 12px;
+  --notification-color: #ffffff;
+  --notification-background-color: #04202f;
+  --notification-background-color-hover: rgb(255 255 255 / 0.15);
+  --notification-box-shadow: 0 0 8px rgb(0 0 0 / 0.15);
+  --notification-opacity: 0.9;
+}

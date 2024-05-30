@@ -1,0 +1,9 @@
+#import "../fragments/RequestFields.graphql"
+
+mutation ($comment: String!, $files: [String!]) {
+  requestHrCreate(comment: $comment, files: $files) {
+    request {
+      ...RequestFields
+    }
+  }
+}

@@ -1,0 +1,12 @@
+:root {
+  --tag-font-weight: 400;
+  --tag-border-width: 1px;
+  --tag-border-color: #cbd0dc;
+  --tag-border-color-disabled: var(--text-color-one);
+  --tag-color: var(--text-color-one);
+  --tag-color-disabled: var(--text-color-two);
+  --tag-small-font-size: 12px;
+  --tag-medium-font-size: 14px;
+  --tag-large-font-size: 16px;
+  --tag-background-color-hover: #f8f9fa;
+}

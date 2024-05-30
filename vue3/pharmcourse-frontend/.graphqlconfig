@@ -1,0 +1,15 @@
+{
+  "name": "Pharma Courses",
+  "schemaPath": "./src/api/graphql/schema.graphql",
+  "extensions": {
+    "endpoints": {
+      "Default GraphQL Endpoint": {
+        "url": "http://test.api.pharmcourse.com/graphql",
+        "headers": {
+          "user-agent": "Pharma Courses Dev GraphQL"
+        },
+        "introspect": true
+      }
+    }
+  }
+}

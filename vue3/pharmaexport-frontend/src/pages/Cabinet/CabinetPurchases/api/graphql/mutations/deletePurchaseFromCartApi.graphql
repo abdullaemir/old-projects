@@ -1,0 +1,8 @@
+mutation ($type: String!, $id: Int!) {
+  deletePurchaseFromCart(id: $id, type: $type) {
+    api {
+      id
+      product_name
+    }
+  }
+}

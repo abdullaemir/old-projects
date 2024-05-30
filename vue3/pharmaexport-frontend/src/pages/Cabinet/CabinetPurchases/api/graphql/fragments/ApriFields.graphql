@@ -1,0 +1,8 @@
+fragment ApriFields on Apri {
+  id
+  product_name
+  type_of_usages
+  therapeutic_category
+  estimated_price
+  currency
+}

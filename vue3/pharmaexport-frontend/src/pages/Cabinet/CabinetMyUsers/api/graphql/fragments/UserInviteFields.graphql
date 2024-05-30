@@ -1,0 +1,9 @@
+fragment UserInviteFields on UserInvite {
+  email
+  id
+  rights
+  can_change_right
+  status
+  company_position
+  date_end
+}

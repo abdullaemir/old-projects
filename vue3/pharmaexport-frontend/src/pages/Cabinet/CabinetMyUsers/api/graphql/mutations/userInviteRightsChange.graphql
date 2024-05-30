@@ -1,0 +1,7 @@
+#import "../fragments/UserInviteFields.graphql"
+
+mutation ($user_invite_id: Int!, $rights: [String!]) {
+  userInviteRightsChange(user_invite_id: $user_invite_id, rights: $rights) {
+    ...UserInviteFields
+  }
+}

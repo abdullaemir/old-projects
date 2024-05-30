@@ -1,0 +1,12 @@
+#import "../fragments/CompanyFields.graphql"
+#import "../fragments/CountryFields.graphql"
+
+query {
+  countries {
+    ...CountryFields
+  }
+
+  companies {
+    ...CompanyFields
+  }
+}

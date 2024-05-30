@@ -1,0 +1,24 @@
+:root {
+  /* Типографика */
+  --font-family: "Montserrat", sans-serif;
+  --font-size: 14px;
+  --font-weight: 500;
+  --line-height: 1.5;
+  --text-color-one: var(--blue-darkest);
+  --text-color-two: var(--blue-light);
+  --text-color-three: var(--white);
+  --text-color-four: var(--pink);
+  --text-color-five: var(--blue-light-3);
+  --text-color-error: var(--pink);
+
+  /* Рамки */
+  --border-color-primary: var(--blue-lightest);
+  --border-color-secondary: var(--pink);
+  --border-color-error: var(--pink);
+
+  /* Позиционирование */
+  --z-index-header: 5;
+  --z-index-popup: 10;
+  --z-index-modal: 15;
+  --z-index-notification: 20;
+}

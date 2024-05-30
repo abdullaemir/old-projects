@@ -1,0 +1,16 @@
+#import "../fragments/CtdDossierProductNameFields.graphql"
+
+query (
+  $product_name : String
+)
+{
+  ctdDossierProductName (
+    filter: {
+      product_name: $product_name
+    },
+    limit: 5,
+    offset: 0
+  ) {
+    ...CtdDossierProductNameFields
+  }
+}

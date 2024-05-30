@@ -1,0 +1,7 @@
+#import "../fragments/CompanyFields.graphql"
+
+query {
+  companies {
+    ...CompanyFields
+  }
+}

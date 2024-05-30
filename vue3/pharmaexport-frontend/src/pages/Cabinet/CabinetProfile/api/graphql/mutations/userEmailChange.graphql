@@ -1,0 +1,15 @@
+#import "~/api/graphql/fragments/UserFields.graphql"
+
+mutation (
+  $email: String!
+  $password: String!
+) {
+  userEmailChange (
+    email: $email
+    password: $password
+  ) {
+    user {
+      ...UserFields
+    }
+  }
+}

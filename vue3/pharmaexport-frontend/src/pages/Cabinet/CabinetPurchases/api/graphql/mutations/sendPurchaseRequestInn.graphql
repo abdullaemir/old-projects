@@ -1,0 +1,13 @@
+mutation (
+  $type: String!
+)
+{
+  sendPurchaseRequest (
+    type: $type
+  ){
+    good {
+      id,
+      product_name
+    }
+  }
+}

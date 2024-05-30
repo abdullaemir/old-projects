@@ -1,0 +1,9 @@
+#import "../fragments/RequestFields.graphql"
+
+mutation ($comment: String!, $files: [String!]) {
+  requestTenderCreate(comment: $comment, files: $files) {
+    request {
+      ...RequestFields
+    }
+  }
+}

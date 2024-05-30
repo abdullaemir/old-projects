@@ -1,0 +1,10 @@
+query ($type: String!) {
+  getPurchaseForCart(type: $type) {
+    api {
+      id
+      product_name
+      type_of_usages
+      therapeutic_category
+    }
+  }
+}

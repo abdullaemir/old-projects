@@ -1,0 +1,3 @@
+fragment CtdDossierTherapyAreaFields on CtdDossier {
+  therapy_area
+}

@@ -1,0 +1,7 @@
+#import "../fragments/GoodDosageFormFields.graphql"
+
+query ($filter: GoodFilter) {
+  goodDosageForm(filter: $filter, limit: 5, offset: 0) {
+    ...GoodDosageFormFields
+  }
+}

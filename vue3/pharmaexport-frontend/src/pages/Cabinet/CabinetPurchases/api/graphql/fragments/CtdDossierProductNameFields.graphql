@@ -1,0 +1,3 @@
+fragment CtdDossierProductNameFields on CtdDossier {
+  product_name
+}

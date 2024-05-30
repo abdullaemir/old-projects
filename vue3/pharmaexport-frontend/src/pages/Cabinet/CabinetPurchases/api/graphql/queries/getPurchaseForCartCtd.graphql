@@ -1,0 +1,10 @@
+query ($type: String!) {
+  getPurchaseForCart(type: $type) {
+    ctdDossier {
+      id
+      product_name
+      dosage_form
+      therapy_area
+    }
+  }
+}

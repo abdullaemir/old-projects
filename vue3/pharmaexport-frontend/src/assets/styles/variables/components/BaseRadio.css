@@ -1,0 +1,12 @@
+:root {
+  --radio-border-width: 1px;
+  --radio-border-color: #e7f0fe;
+  --radio-border: var(--radio-border-width) solid var(--radio-border-color);
+  --radio-background-color: var(--white);
+  --radio-background-color-disabled: var(--blue-lightest);
+  --radio-checked-color: var(--blue-darkest);
+  --radio-checked-color-disabled: var(--blue-light);
+  --radio-label-color-disabled: var(--blue-light);
+  --radio-color-error: var(--pink);
+  --radio-background--color: var(--blue-darkest);
+}

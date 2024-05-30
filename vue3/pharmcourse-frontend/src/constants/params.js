@@ -1,0 +1,3 @@
+const MIN_TIME_ACCESS_TOKEN = 60;
+
+export { MIN_TIME_ACCESS_TOKEN };

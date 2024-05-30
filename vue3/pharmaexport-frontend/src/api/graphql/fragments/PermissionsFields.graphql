@@ -1,0 +1,44 @@
+fragment PermissionsFields on User {
+  permissions {
+    analytics {
+      view_distribution
+      view_pm
+    }
+    first_data {
+      view
+    }
+    hr {
+      view
+    }
+    my_companies {
+      view
+    }
+    my_payments {
+      view
+    }
+    my_profile {
+      change_email
+      view
+    }
+    my_users {
+      view
+    }
+    pharmacourse {
+      view_education
+      view_promo
+    }
+    promotions {
+      view_buyer
+      view_seller
+    }
+    purchases {
+      view_buyer
+      view_seller
+      button_upload
+    }
+    tenders {
+      view_buyer
+      view_seller
+    }
+  }
+}

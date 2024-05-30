@@ -1,0 +1,7 @@
+#import "../fragments/ApriTherapeuticCategoryFields.graphql"
+
+query ($filter: ApriFilter) {
+  apriTherapeuticCategory(filter: $filter, limit: 5, offset: 0) {
+    ...ApriTherapeuticCategoryFields
+  }
+}

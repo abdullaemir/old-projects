@@ -1,0 +1,5 @@
+:root {
+  --link-color-primary: var(--blue-light);
+  --link-color-primary-hover: var(--blue-light-1);
+  --link-color-primary-active: var(--blue-light-2);
+}

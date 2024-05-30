@@ -1,0 +1,6 @@
+fragment AccountWalletFields on AccountWallet {
+  available
+  id
+  payment_method
+  wallet
+}

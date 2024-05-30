@@ -1,0 +1,24 @@
+.input-code__container {
+  --input-code-border-width: 1px;
+  --input-code-border-color: #e7f0fe;
+  --input-code-border-color-hover: #d9e6fb;
+  --input-code-border-color-active: #e7f0fe;
+  --input-code-border-color-disabled: rgb(231 240 254 / 0.6);
+  --input-code-border-color-error: var(--pink);
+  --input-code-border-radius: 8px;
+  --input-code-font-weight: 400;
+
+  --input-code-font-size: 14px;
+  --input-code-medium-font-size: 18px;
+  --input-code-large-font-size: 24px;
+
+  --input-code-medium-height: 40px;
+  --input-code-large-height: 65px;
+
+  --input-code-color: var(--text-color-primary);
+  --input-code-color-disabled: rgb(100 124 159 / 0.6);
+  --input-code-background-color: #f6f7fb;
+  --input-code-background-color-hover: #f8f9fa;
+  --input-code-background-color-active: #f8f9fa;
+  --input-code-background-color-disabled: #ffffff;
+}

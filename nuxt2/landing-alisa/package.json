@@ -1,0 +1,26 @@
+{
+  "private": true,
+  "name": "alisa-spa",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "cross-env NUXT_TELEMETRY_DISABLED=1 NODE_ENV=development nodemon server/index.js --watch server",
+    "devApi": "cross-env NUXT_TELEMETRY_DISABLED=1 NODE_ENV=development DEV_API=1 PORT=3010 nodemon server/index.js --watch server",
+    "generate": "nuxt generate",
+    "start": "cross-env NUXT_TELEMETRY_DISABLED=1 NODE_ENV=production HOST=127.0.0.1 PORT=3000 node server/index.js"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.13.1",
+    "core-js": "^3.15.1",
+    "cross-env": "^7.0.3",
+    "express": "^4.17.1",
+    "node-cache": "^5.1.2",
+    "nodemon": "^2.0.15",
+    "nuxt": "^2.15.7",
+    "nuxt-mq": "^2.0.2",
+    "swiper": "^5.4.5",
+    "validator": "^13.6.0",
+    "vue-awesome-swiper": "^4.1.1",
+    "vuex": "^3.6.2"
+  }
+}

@@ -1,0 +1,7 @@
+#import "../fragments/AccountWalletFields.graphql"
+
+query {
+  accountWallets {
+    ...AccountWalletFields
+  }
+}

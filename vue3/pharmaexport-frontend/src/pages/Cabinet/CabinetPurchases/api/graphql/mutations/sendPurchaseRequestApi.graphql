@@ -1,0 +1,13 @@
+mutation (
+  $type: String!
+)
+{
+  sendPurchaseRequest (
+    type: $type
+  ){
+    api {
+      id,
+      product_name
+    }
+  }
+}

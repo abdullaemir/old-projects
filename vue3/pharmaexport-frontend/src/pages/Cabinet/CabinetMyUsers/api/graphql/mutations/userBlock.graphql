@@ -1,0 +1,7 @@
+#import "~/api/graphql/fragments/UserFields.graphql"
+
+mutation ($user_id: Int!) {
+  userBlock(user_id: $user_id) {
+    ...UserFields
+  }
+}

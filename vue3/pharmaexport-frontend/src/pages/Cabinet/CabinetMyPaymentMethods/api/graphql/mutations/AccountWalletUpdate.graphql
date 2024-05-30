@@ -1,0 +1,9 @@
+#import "../fragments/AccountWalletFields.graphql"
+
+mutation ($id: Int!, $payment_method: String!, $wallet: String!, $available: String) {
+  accountWalletUpdate(id: $id, payment_method: $payment_method, wallet: $wallet, available: $available) {
+    account_wallet {
+      ...AccountWalletFields
+    }
+  }
+}

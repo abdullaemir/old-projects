@@ -1,0 +1,3 @@
+fragment ApriTypeOfUsageFields on Apri {
+  type_of_usage
+}

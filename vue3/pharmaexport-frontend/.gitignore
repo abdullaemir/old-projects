@@ -1,0 +1,13 @@
+# Folders
+dist
+node_modules
+.ssh
+
+# ENV
+.env
+
+# Docker
+docker-compose.override.yml
+
+# NPM
+.npmrc

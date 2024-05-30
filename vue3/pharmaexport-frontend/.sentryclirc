@@ -1,0 +1,8 @@
+[defaults]
+org=sentry
+url=https://sentry.phz.team/
+project=pharmaexport-frontend
+
+[auth]
+token=44eef8717dbc46f9946d388c4513110961e0c076655e46f98846a94969415117
+dsn=https://4bb38bdb52124f408b39069c6a56fc78@sentry.phz.team/7

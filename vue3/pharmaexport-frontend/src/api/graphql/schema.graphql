@@ -1,0 +1,445 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+"Информация о кошельке аккаунта"
+type AccountWallet {
+    available: String
+    id: Int
+    payment_method: String
+    wallet: String
+}
+
+"Создание кошелька аккаунта"
+type AccountWalletCreate {
+    account_wallet: AccountWallet
+}
+
+"Изменение кошелька аккаунта"
+type AccountWalletUpdate {
+    account_wallet: AccountWallet
+}
+
+"Информация о Api product"
+type Apri {
+    currency: String
+    estimated_price: String
+    id: Int
+    product_name: String
+    therapeutic_category: String
+    type_of_usage: String
+    type_of_usages: String
+}
+
+"Информация о корзине"
+type Cart {
+    api: Apri
+    ctdDossier: CtdDossier
+    good: Good
+    id: Int
+}
+
+"Информация о компании"
+type Company {
+    country_id: Int
+    documents_verification: [Document]
+    id: Int
+    name: String
+    registration_number: String
+    site: String
+    type_company: String
+    verification_status: String
+}
+
+"Создание компании"
+type CompanyCreate {
+    company: Company
+}
+
+"Изменить компанию"
+type CompanyUpdate {
+    company: Company
+}
+
+"Информация о стране"
+type Country {
+    id: Int
+    name: String
+}
+
+"Информация о CTD Dossier"
+type CtdDossier {
+    currency: String
+    dosage_form: String
+    estimated_price: String
+    id: Int
+    product_name: String
+    therapy_area: String
+}
+
+"Информация о документе"
+type Document {
+    created_at: String
+    hash: String
+    id: ID
+    name: String
+    size: Int
+    type: String
+    url: String
+}
+
+"Информация по сущностям, в которых удалили документы"
+type DocumentDelete {
+    company: Company
+}
+
+"Информация о Good"
+type Good {
+    currency: String
+    delivery_period: Int
+    dosage_form: String
+    drug_form: String
+    eas_product_id: String
+    estimated_price: String
+    id: Int
+    product_name: String
+    therapy_area: [String]
+}
+
+"Информация о Good dosage form"
+type GoodDosageForm {
+    dosage_form: String
+}
+
+"Информация о Good drugform"
+type GoodDrugForm {
+    drug_form: String
+}
+
+"Информация о Good product name"
+type GoodProductName {
+    product_name: String
+}
+
+type Mutation {
+    accountWalletCreate(available: String, payment_method: String!, wallet: String!): AccountWalletCreate
+    accountWalletUpdate(available: String, id: Int!, payment_method: String!, wallet: String!): AccountWalletUpdate
+    addPurchaseToCart(id: Int!, type: String!): [Cart]
+    analyticsRequestForm(agreement: Boolean!, company_country: String!, company_name: String!, email: String!, job_title: String!, name: String!, phone: String!): Boolean
+    companyCreate(country_id: Int!, files_new: [String!], name: String!, registration_number: String!, site: String): CompanyCreate
+    companyUpdate(country_id: Int!, files_new: [String!], files_old: [String!], id: Int!, name: String!, registration_number: String!, site: String): CompanyUpdate
+    deletePurchaseFromCart(id: Int!, type: String!): [Cart]
+    documentDelete(entity_name: String!, entity_number: Int!, hash: String!): DocumentDelete
+    firstdataSendMail(email: String!, name: String!, phone: String!): Boolean
+    passwordChange(password: String!, password_confirmed: String!, password_new: String!): PasswordChange
+    profileUpdate(company_name: String, company_position: String!, designation: String, name: String!, phone: String!, surname: String!): ProfileUpdate
+    requestAnalyticsCreate(email: String!, name: String!, phone: String!): Boolean
+    requestGuestCreate(comment: String!, email: String!, files: [String!], name: String!, phone: String!): RequestGuestCreate
+    requestHrCreate(comment: String!, files: [String!]): RequestCreate
+    requestPromotionsCreate(comment: String!, files: [String!]): RequestCreate
+    requestPurchasesCreate(comment: String!, files: [String!]): RequestCreate
+    requestTenderCreate(comment: String!, files: [String!]): RequestCreate
+    sendPurchaseRequest(type: String!): [Cart]
+    userBlock(user_id: Int!): User
+    userDelete(user_id: Int!): Boolean
+    userEmailChange(email: String!, password: String!): UserEmailChange
+    userInviteCreate(email: String!, rights: [String]): UserInviteCreate
+    userInviteDelete(invite_id: Int!): Boolean
+    userInviteRightsChange(rights: [String], user_invite_id: Int!): UserInvite
+    userReadNotification(id: Int!): UserNotificationItem
+    userRightsChange(rights: [String], user_id: Int!): User
+    userUtm(utm_campaign: String, utm_medium: String, utm_source: String): Boolean
+}
+
+"Изменить пароль пользователя"
+type PasswordChange {
+    user: User
+}
+
+"Изменить профиль пользователя"
+type ProfileUpdate {
+    user: User
+}
+
+type Query {
+    accountWallets(limit: Int = 30, offset: Int = 0, orderBy: [OrderByInput]): [AccountWallet]
+    activities: StatisticActivities
+    apri(filter: ApriFilter, limit: Int = 30, offset: Int = 0, orderBy: [OrderByInput]): [Apri]
+    apriProductName(filter: ApriFilter, limit: Int = 30, offset: Int = 0, orderBy: [OrderByInput]): [Apri]
+    apriTherapeuticCategory(filter: ApriFilter, limit: Int = 30, offset: Int = 0, orderBy: [OrderByInput]): [Apri]
+    apriTypeOfUsage(filter: ApriFilter, limit: Int = 30, offset: Int = 0, orderBy: [OrderByInput]): [Apri]
+    companies(limit: Int = 30, offset: Int = 0, orderBy: [OrderByInput]): [Company]
+    company(id: Int!): Company
+    countries: [Country]
+    ctdDossier(filter: CtdDossierFilter, limit: Int = 30, offset: Int = 0, orderBy: [OrderByInput]): [CtdDossier]
+    ctdDossierDosageForm(filter: CtdDossierFilter, limit: Int = 30, offset: Int = 0, orderBy: [OrderByInput]): [CtdDossier]
+    ctdDossierProductName(filter: CtdDossierFilter, limit: Int = 30, offset: Int = 0, orderBy: [OrderByInput]): [CtdDossier]
+    ctdDossierTherapyArea(filter: CtdDossierFilter, limit: Int = 30, offset: Int = 0, orderBy: [OrderByInput]): [CtdDossier]
+    getPurchaseForCart(type: String!): [Cart]
+    good(filter: GoodFilter, limit: Int = 30, offset: Int = 0, orderBy: [OrderByInput]): [Good]
+    goodDosageForm(filter: GoodFilter, limit: Int = 30, offset: Int = 0, orderBy: [OrderByInput]): [GoodDosageForm]
+    goodDrugForm(filter: GoodFilter, limit: Int = 30, offset: Int = 0, orderBy: [OrderByInput]): [GoodDrugForm]
+    goodProductName(filter: GoodFilter, limit: Int = 30, offset: Int = 0, orderBy: [OrderByInput]): [GoodProductName]
+    registered: StatisticRegistered
+    user: User
+    userNotifications(limit: Int = 30, offset: Int = 0): UserNotification
+    userRights: [String]
+    users(limit: Int = 30, offset: Int = 0, orderBy: [OrderByInput]): [User]
+    usersInvite(limit: Int = 30, offset: Int = 0, orderBy: [OrderByInput]): [UserInvite]
+}
+
+"Информация о заявке"
+type Request {
+    "Дата создания заявки"
+    created_at: String
+    "Кем создана заявка"
+    created_by: String
+    id: Int
+    request_messages: [RequestMessage]
+    status: String
+}
+
+"Создана заявка (запрос)"
+type RequestCreate {
+    request: Request
+}
+
+"Информация о заявке отправленная посетителем сайта"
+type RequestGuest {
+    comment: String
+    "Дата создания заявки"
+    created_at: String
+    documents: [Document]
+    email: String
+    id: Int
+    name: String
+    phone: String
+}
+
+"Создана заявка (запрос) посетителем сайта"
+type RequestGuestCreate {
+    request_guest: RequestGuest
+}
+
+"Сообщение заявки"
+type RequestMessage {
+    "Дата создания сообщения"
+    created_at: String
+    "Кем создано сообщение"
+    created_by: String
+    "Роль пользователя"
+    created_by_role: String
+    documents: [Document]
+    id: Int
+    "Прочитано?"
+    is_read: Boolean
+    message: String
+}
+
+"Статистика активности"
+type StatisticActivities {
+    active_tenders_now: String
+    products_on_the_site: String
+    transactions_completed: String
+}
+
+"Статистика зарегестрированных"
+type StatisticRegistered {
+    countries: String
+    distributors: String
+    hcrs: String
+    pharmaceutical_companies: String
+}
+
+"Получение информации о пользователи"
+type User {
+    can_change_right: Boolean
+    company_name: String
+    company_position: String
+    designation: String
+    email: String
+    id: Int
+    is_admin_account: Boolean
+    is_confirmed_email: Boolean
+    is_owner_account: Boolean
+    name: String
+    permissions: permissions
+    phone: String
+    rights: [String]
+    status: String
+    surname: String
+}
+
+"Изменение email пользователя"
+type UserEmailChange {
+    user: User
+}
+
+"Информация о приглашении пользователя"
+type UserInvite {
+    can_change_right: Boolean
+    company_position: String
+    date_created: String
+    date_end: String
+    email: String
+    id: Int
+    rights: [String]
+    status: String
+}
+
+"Создание приглашения пользователю"
+type UserInviteCreate {
+    user_invite: UserInvite
+}
+
+"Информация о Notification"
+type UserNotification {
+    is_new_notification: Boolean
+    list: [UserNotificationItem]
+}
+
+"Информация о Notification"
+type UserNotificationItem {
+    content: String
+    date_end: String
+    date_start: String
+    header: String
+    id: Int
+    is_read: Boolean
+    link_btn: String
+    sort: Int
+    text_btn: String
+}
+
+type analytics {
+    "Разрешение на просмотр Analytics (Distribution)"
+    view_distribution: Boolean
+    "Разрешение на просмотр Analytics (Pharmaceutical Manufacturer)"
+    view_pm: Boolean
+}
+
+type first_data {
+    "Разрешение на просмотр FirstData"
+    view: Boolean
+}
+
+type hr {
+    "Разрешение на просмотр HR"
+    view: Boolean
+}
+
+type my_companies {
+    "Разрешение на просмотр My companies"
+    view: Boolean
+}
+
+type my_payments {
+    "Разрешение на просмотр My payments"
+    view: Boolean
+}
+
+type my_profile {
+    "Разрешено менять email"
+    change_email: Boolean
+    "Разрешение на просмотр My profile (доступ есть всегда)"
+    view: Boolean
+}
+
+type my_users {
+    "Разрешение на просмотр My users"
+    view: Boolean
+}
+
+"Разрешения"
+type permissions {
+    "Разрешения для Analytics"
+    analytics: analytics
+    "Разрешения для FirstData"
+    first_data: first_data
+    "Разрешения для HR"
+    hr: hr
+    "Разрешения для My companies"
+    my_companies: my_companies
+    "Разрешения для My payments"
+    my_payments: my_payments
+    "Разрешения для My profile"
+    my_profile: my_profile
+    "Разрешения для My users"
+    my_users: my_users
+    "Разрешения для PharmaCourse"
+    pharmacourse: pharmacourse
+    "Разрешения для Promotions"
+    promotions: promotions
+    "Разрешения для Purchases"
+    purchases: purchases
+    "Разрешения для Tenders"
+    tenders: tenders
+}
+
+type pharmacourse {
+    "Разрешение на просмотр PharmaCourse (Education)"
+    view_education: Boolean
+    "Разрешение на просмотр PharmaCourse (Promo)"
+    view_promo: Boolean
+}
+
+type promotions {
+    "Разрешение на просмотр Promotions (Buyer)"
+    view_buyer: Boolean
+    "Разрешение на просмотр Promotions (Seller)"
+    view_seller: Boolean
+}
+
+type purchases {
+    "Разрешения для загрузки прайста Purchases"
+    button_upload: Boolean
+    "Разрешение на просмотр Purchases (Buyer)"
+    view_buyer: Boolean
+    "Разрешение на просмотр Purchases (Seller)"
+    view_seller: Boolean
+}
+
+type tenders {
+    "Разрешение на просмотр Tenders (Buyer)"
+    view_buyer: Boolean
+    "Разрешение на просмотр Tenders (Seller)"
+    view_seller: Boolean
+}
+
+"Информация о Api product"
+input ApriFilter {
+    product_name: String
+    therapeutic_categories: [String]
+    therapeutic_category: String
+    type_of_usage: String
+    type_of_usages: [String]
+}
+
+"Информация о Ctd Dossier"
+input CtdDossierFilter {
+    dosage_form: String
+    dosage_forms: [String]
+    product_name: String
+    therapy_area: String
+    therapy_areas: [String]
+}
+
+"Информация о Good"
+input GoodFilter {
+    delivery_period: Int
+    dosage_form: String
+    dosage_forms: [String]
+    drug_form: String
+    drug_forms: [String]
+    product_name: String
+    therapy_areas: [String]
+}
+
+"Сортировка"
+input OrderByInput {
+    field: String
+    sort: String
+}

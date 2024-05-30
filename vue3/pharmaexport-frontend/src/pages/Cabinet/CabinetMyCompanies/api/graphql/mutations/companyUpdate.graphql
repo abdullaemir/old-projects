@@ -1,0 +1,25 @@
+#import "../fragments/CompanyFields.graphql"
+
+mutation (
+  $id: Int!
+  $name: String!
+  $registration_number: String!
+  $site: String
+  $country_id: Int!
+  $files_new: [String!]
+  $files_old: [String!]
+) {
+  companyUpdate(
+    id: $id
+    name: $name
+    registration_number: $registration_number
+    site: $site
+    country_id: $country_id
+    files_new: $files_new
+    files_old: $files_old
+  ) {
+    company {
+      ...CompanyFields
+    }
+  }
+}

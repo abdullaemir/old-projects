@@ -1,0 +1,7 @@
+#import "../fragments/CtdDossierFields.graphql"
+
+query ($filter: CtdDossierFilter, $limit: Int, $offset: Int, $orderBy: [OrderByInput]) {
+  ctdDossier(filter: $filter, limit: $limit, offset: $offset, orderBy: $orderBy) {
+    ...CtdDossierFields
+  }
+}

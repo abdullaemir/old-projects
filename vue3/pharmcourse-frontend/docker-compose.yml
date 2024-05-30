@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  app:
+    build:
+      args:
+        authToken: ${NPM_AUTH_TOKEN}
+        buildMode: ${NPM_BUILD_MODE}
+      context: .
+      target: build-${NPM_BUILD_MODE}
+    ports:
+      - "${NODE_PORT}:8080"
+    restart: unless-stopped

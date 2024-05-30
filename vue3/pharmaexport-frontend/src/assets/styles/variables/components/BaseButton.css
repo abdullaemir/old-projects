@@ -1,0 +1,16 @@
+:root {
+  --button-height-small: 40px;
+  --button-height-medium: 52px;
+  --button-height-large: 65px;
+  --button-border-radius-square: 4px;
+  --button-border-radius-half-round: 40px;
+  --button-border-radius-round: 80px;
+  --button-background-color-blue: #142269;
+  --button-background-color-purple: #e80061;
+  --button-background-color-purple-hover: #d50059;
+  --button-background-color-purple-active: #c70053;
+  --button-background-color-gray: #cfdbec;
+  --button-background-box-shadow-purple: 0 0 6px rgb(0 0 0 / 0.03);
+  --button-font-weight: 600;
+  --button-color: #ffffff;
+}

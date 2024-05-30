@@ -1,0 +1,33 @@
+{
+  "messages": {
+    "_default": "The is not valid",
+    "alpha": "The field may only contain alphabetic characters",
+    "alpha_num": "The field may only contain alpha-numeric characters",
+    "alpha_dash": "The field may contain alpha-numeric characters as well as dashes and underscores",
+    "alpha_spaces": "The field may only contain alphabetic characters as well as spaces",
+    "between": "The field must be between 0:{min} and 1:{max}",
+    "confirmed": "The field confirmation does not match",
+    "digits": "The field must be numeric and exactly contain 0:{length} digits",
+    "dimensions": "The field must be 0:{width} pixels by 1:{height} pixels",
+    "email": "The field must be a valid email",
+    "excluded": "The field is not a valid value",
+    "ext": "The field is not a valid file",
+    "image": "The field must be an image",
+    "integer": "The field must be an integer",
+    "length": "The field must be 0:{length} long",
+    "max_value": "The field must be 0:{max} or less",
+    "max": "The field cannot contain more than 0:{length} characters",
+    "min_length": "The field cannot contain less than 0:{length} files",
+    "max_length": "The field cannot contain more than 0:{length} files",
+    "mimes": "The field must have a valid file type",
+    "min_value": "The field must be 0:{min} or more",
+    "min": "The field must be at least 0:{length} characters",
+    "numeric": "The field may only contain numeric characters",
+    "one_of": "The field is not a valid value",
+    "regex": "The field is not a valid URL",
+    "required_if": "The field is required",
+    "required": "The field is required",
+    "size": "The field size must be less than 0:{size}KB",
+    "url": "The field is not a valid URL"
+  }
+}

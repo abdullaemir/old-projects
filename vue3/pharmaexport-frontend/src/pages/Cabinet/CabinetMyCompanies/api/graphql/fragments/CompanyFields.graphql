@@ -1,0 +1,13 @@
+#import "~/api/graphql/fragments/DocumentsFields.graphql"
+
+fragment CompanyFields on Company {
+  id
+  country_id
+  name
+  registration_number
+  site
+  verification_status
+  documents_verification {
+    ...DocumentsFields
+  }
+}

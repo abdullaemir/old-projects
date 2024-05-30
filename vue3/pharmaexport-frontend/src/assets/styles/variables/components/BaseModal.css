@@ -1,0 +1,10 @@
+:root {
+  --modal-z-index: var(--z-index-modal);
+  --modal-width: 560px;
+  --modal-border-radius: 8px;
+  --modal-background-color: var(--white);
+  --modal-box-shadow: none;
+  --modal-header-box-shadow: 0 0 40px rgb(5 12 20 / 0.06);
+  --modal-cross-stroke: #031017;
+  --modal-overlay-background-color: rgb(4 32 47 / 0.4);
+}

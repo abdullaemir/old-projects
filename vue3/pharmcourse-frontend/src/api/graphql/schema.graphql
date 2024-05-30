@@ -1,0 +1,310 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+"Информация по аккредитующей организации"
+type AccreditationOrganization {
+    "Описание сертификата организации"
+    certificate_description: String
+    "Описание организации"
+    description: String
+    "Картинка-орбазец сертификата"
+    logo: String
+    "Буквенное обозначение аккредитации (CPD/CME)"
+    mark: String
+    "Наименование организации"
+    name: String
+    "Количество баллов, получаемых за прохождение курса (сумма активити из сертификата)"
+    points: Float
+}
+
+"Блок сертификата"
+type Certificate {
+    "Список аккредитующих организаций"
+    accreditations: [AccreditationOrganization]
+    "Описание выдаваемого сертификата"
+    certificate_description: String
+    "Картинка-пример сертификата"
+    example_img: String
+    "Буквенное определение сертификата (CPD/CME)"
+    mark: String
+    "Описание организации"
+    organization_description: String
+}
+
+"Блок FAQ"
+type Faq {
+    "Ответ"
+    answer: String
+    "Вопрос"
+    question: String
+}
+
+"Информация о языке пользователя"
+type Language {
+    id: Int
+    list: [String]
+    name: String
+    url: String
+}
+
+"Получение live-вебинара"
+type LiveWebinar {
+    url: String
+}
+
+"Информация о регионе пользователя"
+type MainRegion {
+    city_for_timezone: String
+    id: Int
+    list: [String]
+    name: String
+    timezone: String
+    url: String
+}
+
+type Mutation {
+    "Просмотрены активные уведомления"
+    notificationsViewed(ids: [Int]!): [Notification]
+    "Записать в БД UTM метки пришедшего юзера"
+    setUtm(utm_campaign: String, utm_medium: String, utm_source: String): Boolean
+    "Записывает пользователя с список участников курса и отправляет письмо на почту админам о запросе консультации"
+    trainingLeaveRequest(id: Int!): TrainingSignUp
+    "Валидирует финальную цену и возвращает ссылку на оплату в случае успеха"
+    trainingMakePayment(id: Int!, payment_method: String!, pharmacoins: Float, promocode: String): String
+    "Записывает пользователя с список участников курса"
+    trainingSignUp(id: Int!): TrainingSignUp
+    "When User click Apply (selected Purchase the course) on training page"
+    userWantToPay(training_id: ID!): Boolean
+    webinarUpdate(active: Int!, id: Int!): WebinarUpdate
+}
+
+"Получение уведомления"
+type Notification {
+    active: Boolean
+    created_at: Int
+    header: String
+    id: Int
+    lnk: String
+    lnk_title: String
+    t: String
+    txt: String
+}
+
+"Информация о партнёра курса"
+type Partner {
+    "Описание партнёра"
+    description: String
+    "ID партнёра"
+    id: Int
+    "Путь до картинки логотипа"
+    logo: String
+    "Наименование партнёра"
+    name: String
+}
+
+type Query {
+    "Получение ссылки на вебинар, который проходит в данный момент"
+    liveWebinar: LiveWebinar
+    "Получение списка уведомлений"
+    notifications: [Notification]
+    trainingApplySaleByPharmacoins(id: Int!, pharmacoins: Float!): TrainingSaleCost
+    trainingApplySaleByPromocode(id: Int!, promocode: String!): TrainingSaleCost
+    trainings(filter: TrainingFilter!, limit: Int, offset: Int, orderBy: [OrderBy]): [Training]
+    user: User
+    webinars(filter: WebinarFilter, limit: Int, offset: Int, orderBy: [OrderBy]): [Webinar]
+}
+
+"Информация о курсе"
+type Training {
+    "Список преимуществ (CP->Training->Language->Under header)"
+    advantages: [String]
+    "Количество баллов которое можно потратить в качестве скидки"
+    can_be_paid_by_pharmacoins: Float
+    "Данные для блока Сертификата"
+    certificate: Certificate
+    "Стоимость курса со всеми скидками"
+    cost: Float
+    "Символ валюты"
+    currency: String
+    "Дата окончания (CP->Training->Event)"
+    date_end: Int
+    "Дата начала курса (CP->Training->Event)"
+    date_start: Int
+    "Краткое описание курса  (CP->Training->Language->above block course classes)"
+    description: String
+    "Список FAQ (два элемента - вопрос и ответ) (CP->Training->Faqs)"
+    faqs: [Faq]
+    id: Int
+    "Можно ли частично оплатить этот курс баллами (CP->Training->Event->Can be paid by PharmaCoins - если больше нуля)"
+    is_available_for_pharmacoins: Boolean
+    "Бесплатный ли курс для пользователя"
+    is_free: Boolean
+    "Оплатил ли текущий пользователь этот курс"
+    is_user_paid: Boolean
+    "Отправлял ли юзер запрос на конслультацию по курсу в течении последних 24х часов"
+    is_user_sent_request: Boolean
+    "Записан ли текущий пользователь на курс"
+    is_user_signed: Boolean
+    "Список преимуществ (CP->Training->Language->Objectives)"
+    objectives: [String]
+    "Стоимость без скидок"
+    old_cost: Float
+    "Список преимуществ (CP->Training->Event->Partners)"
+    partners: [Partner]
+    "Тип получаемых знаний от курса (CP->Training->Edit->Skills)"
+    skills: [String]
+    "Список спикеров (CP->Training->Edit->Block Author)"
+    speakers: [TrainingAuthor]
+    "Список специальностей, для которых подходит этот курс (CP->Training->Edit->Professions)"
+    specialties: [String]
+    "Наименование курса (CP->Training->Edit->Seo Title)"
+    title: String
+    "Список тем (CP->Training->Topics)"
+    topics: [String]
+}
+
+"Получение информации о спикере"
+type TrainingAuthor {
+    "Достижения"
+    achievements: String
+    "Аватарка"
+    avatar: String
+    "Описание"
+    description: String
+    id: Int
+    "Имя"
+    name: String
+    "Отчество"
+    patronym: String
+    slug: String
+    "Фамилия"
+    surname: String
+}
+
+"Получение информации о промокоде к курсу (sale = это процент скидки)"
+type TrainingSaleCost {
+    cost_after: Float
+    cost_before: Float
+    discount: Float
+}
+
+"Запись на курс"
+type TrainingSignUp {
+    training: Training
+}
+
+"Получение информации о пользователе"
+type User {
+    avatar_path: String
+    bonus_balance: Int
+    email: String
+    id: Int
+    is_confirm: Boolean
+    language: Language
+    main_region: MainRegion
+    name: String
+    patronym: String
+    phone: String
+    surname: String
+}
+
+"Информация о вебинаре"
+type Webinar {
+    accreditation_mark: String
+    accreditation_points: Int
+    accreditation_status: Int
+    accreditation_text: String
+    accreditation_type: String
+    active: Int
+    cost: Int
+    count_users: Int
+    currency_id: Int
+    datetime_end: Int
+    datetime_start: Int
+    gift_text: String
+    has_certificate: Int
+    hide_fields: String
+    id: Int
+    is_gift_display: Int
+    is_public: Int
+    is_user_signed: Boolean
+    lang_id: Int
+    meeting_id: Int
+    meeting_link: String
+    meeting_number: String
+    meeting_password: String
+    oplata_last: Int
+    organization_id: Int
+    partner_id: Int
+    room_pin: Int
+    shablon_id: Int
+    training_item_id: Int
+    tst_id: Int
+    universal_cost: Int
+    universal_currency_id: Int
+    video_cost: Int
+    video_cost_discount: Int
+    video_link: String
+    webinar_view_bonus: Int
+    zoom_webinar_id: Int
+}
+
+"Изменить вебинар"
+type WebinarUpdate {
+    webinar: Webinar
+}
+
+"Type of sorting"
+enum sort {
+    ASC
+    DESC
+    RANDOM
+}
+
+"Тип для сортировок"
+input OrderBy {
+    field: String
+    sort: sort
+}
+
+"Фильтрация курсов"
+input TrainingFilter {
+    "Начиная от"
+    datetime_from: Int
+    "Заканчивая до"
+    datetime_to: Int
+    "Конкретный курс по ID"
+    id: Int
+    "Несколько курсов по ID"
+    ids: [Int]
+    "Активный ли курс"
+    isActive: Boolean
+    "Публичный/приватный курс"
+    isPublic: Boolean
+    "Язык для отображения курса"
+    language: String!
+    "Курс по slug"
+    slug: String
+}
+
+"Фильтрация вебинаров"
+input WebinarFilter {
+    "Returns webinars which start date from"
+    datetime_from: Int
+    "Returns webinars which start date to"
+    datetime_to: Int
+    "Returns one webinar"
+    id: Int
+    "Returns multiple webinars"
+    ids: [Int]
+    "Returns only active webinars"
+    isActive: Boolean
+    "Returns only completed webinars"
+    isCompleted: Boolean
+    "Returns only public or private webinars"
+    isPublic: Boolean
+}

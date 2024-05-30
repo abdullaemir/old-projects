@@ -1,0 +1,7 @@
+#import "../fragments/ApriTypeOfUsageFields.graphql"
+
+query ($filter: ApriFilter) {
+  apriTypeOfUsage(filter: $filter, limit: 5, offset: 0) {
+    ...ApriTypeOfUsageFields
+  }
+}

@@ -1,0 +1,27 @@
+:root {
+  --tel-input-small-height: 30px;
+  --tel-input-medium-height: 46px;
+  --tel-input-large-height: 65px;
+  --tel-input-font-weight: 400;
+  --tel-input-font-size: 14px;
+  --tel-input-color: var(--text-color-one);
+  --tel-input-color-disabled: rgb(100 124 159 / 0.6);
+  --tel-input-border-radius: 8px;
+  --tel-input-border-width: 1px;
+  --tel-input-border-color: #e7f0fe;
+  --tel-input-border: var(--tel-input-border-width) solid var(--tel-input-border-color);
+  --tel-input-border-color-hover: #d9e6fb;
+  --tel-input-border-color-active: #e7f0fe;
+  --tel-input-border-color-disabled: #e7f0fe;
+  --tel-input-background-color: #f6f7fb;
+  --tel-input-background-color-hover: #f8f9fa;
+  --tel-input-background-color-active: #f8f9fa;
+  --tel-input-background-color-disabled: #ffffff;
+  --tel-input-error: var(--pink);
+  --tel-input-placeholder-font-weight: 500;
+  --tel-input-placeholder-font-size: 14px;
+  --tel-input-label-color: var(--text-color-two);
+  --tel-input-label-color-disabled: rgb(100 124 159 / 0.6);
+  --tel-input-scrollbar-thumb-background-color: #aebed6;
+  --tel-input-scrollbar-thumb-background-color-hover: #647c9f;
+}

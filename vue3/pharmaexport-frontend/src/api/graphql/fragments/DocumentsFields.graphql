@@ -1,0 +1,6 @@
+fragment DocumentsFields on Document {
+  id
+  hash
+  name
+  url
+}

@@ -1,0 +1,42 @@
+:root {
+  /* Цвета */
+  --white: #ffffff;
+  --white-1: rgba(255, 255, 255, 0.2);
+  --gold: #d3b282;
+  --gold-gradiend: linear-gradient(268deg, #b69460 19%, #d0b285 90%);
+  --gold-gradiend-1: linear-gradient(268deg, #e1c395 19%, #b69460 90%);
+  --black-lighter: rgb(62 59 59 / 0.8);
+  --black-lighter-1: rgb(34 34 36 / 0.7);
+  --black-light: #222224;
+  --black: #232323;
+
+  /* Типографика */
+  --font-family: "Manrope", sans-serif;
+  --font-size: 14px;
+  --line-height: 1.3;
+  --text-color-primary: var(--white);
+  --text-color-secondary: var(--gold);
+
+  /* Рамки */
+  --border-color-primary: var(--gold);
+  --border-color-secondary: var(--white-1);
+  --border-color-tertiary: var(--gold-gradiend);
+
+  /* Фоны */
+  --background-color-primary: var(--black-lighter);
+  --background-color-secondary: var(--black-light);
+  --background-color-tertiary: var(--gold);
+  --background-color-quaternary: var(--black);
+  --background-color-quinary: var(--black-lighter-1);
+  --background-color-hexadecimal: var(--gold-gradiend-1);
+  --background-color-septenary: var(--gold-gradiend);
+
+  /* Позиционирование */
+  --z-index-modal: 10;
+
+  /* Кнопки */
+  --button-background-primary: var(--gold-gradiend);
+  --button-background-primary-hover: var(--gold-gradiend-1);
+  --button-border-primary: var(--gold);
+  --button-color-primary: var(--white);
+}

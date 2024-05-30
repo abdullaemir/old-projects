@@ -1,0 +1,7 @@
+#import "~/api/graphql/fragments/UserFields.graphql"
+
+mutation ($user_id: Int!, $rights: [String!]) {
+  userRightsChange(user_id: $user_id, rights: $rights) {
+    ...UserFields
+  }
+}

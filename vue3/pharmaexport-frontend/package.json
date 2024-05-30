@@ -1,0 +1,46 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite-ssr build",
+    "dev": "vite-ssr dev",
+    "lint": "npm run lint:scripts && npm run lint:styles",
+    "lint:scripts": "eslint .",
+    "lint:styles": "stylelint **/*.{css,html,vue}",
+    "prepare": "npx husky install",
+    "preview": "pg-ssr preview",
+    "start": "pg-ssr"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.6.9",
+    "@pg/helpers": "^0.0.58",
+    "@sentry/vue": "^7.1.1",
+    "@vee-validate/i18n": "^4.5.11",
+    "@vee-validate/rules": "^4.5.11",
+    "@vue/apollo-composable": "^4.0.0-alpha.17",
+    "@vuepic/vue-datepicker": "^3.2.0",
+    "@vueuse/core": "^8.6.0",
+    "@vueuse/head": "^0.7.6",
+    "@vueuse/integrations": "^8.6.0",
+    "lodash.get": "^4.4.2",
+    "maska": "^1.5.0",
+    "pinia": "^2.0.14",
+    "swiper": "^6.8.4",
+    "universal-cookie": "^4.0.4",
+    "vee-validate": "^4.5.11",
+    "vite-ssr": "^0.16.0",
+    "vue": "^3.2.37",
+    "vue-router": "^4.0.16",
+    "vue-tel-input": "^6.0.0-beta.7",
+    "vue3-circle-progress": "^1.0.7"
+  },
+  "devDependencies": {
+    "@pg/linters": "^0.0.69",
+    "@pg/ssr": "^0.0.8",
+    "@rollup/plugin-graphql": "^1.1.0",
+    "@rollup/plugin-replace": "^4.0.0",
+    "@sentry/tracing": "^7.1.1",
+    "@vitejs/plugin-vue": "^2.3.3",
+    "vite": "^2.9.12"
+  }
+}

@@ -1,0 +1,7 @@
+#import "../fragments/CtdDossierTherapyAreaFields.graphql"
+
+query ($filter: CtdDossierFilter) {
+  ctdDossierTherapyArea(filter: $filter, limit: 5, offset: 0) {
+    ...CtdDossierTherapyAreaFields
+  }
+}

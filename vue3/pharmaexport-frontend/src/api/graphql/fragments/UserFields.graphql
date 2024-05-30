@@ -1,0 +1,17 @@
+#import "./PermissionsFields.graphql"
+
+fragment UserFields on User {
+  id
+  name
+  surname
+  phone
+  email
+  designation
+  rights
+  status
+  is_admin_account
+  can_change_right
+  company_name
+  company_position
+  ...PermissionsFields
+}

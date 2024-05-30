@@ -1,0 +1,15 @@
+#import "../fragments/CompanyFields.graphql"
+
+mutation ($name: String!, $registration_number: String!, $site: String, $country_id: Int!, $files_new: [String!]) {
+  companyCreate(
+    name: $name
+    registration_number: $registration_number
+    site: $site
+    country_id: $country_id
+    files_new: $files_new
+  ) {
+    company {
+      ...CompanyFields
+    }
+  }
+}

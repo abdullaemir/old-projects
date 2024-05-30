@@ -1,0 +1,33 @@
+.input__container {
+  --input-border-width: 1px;
+  --input-border-color: #e7f0fe;
+  --input-border-color-hover: #d9e6fb;
+  --input-border-color-active: #e7f0fe;
+  --input-border-color-disabled: rgb(231 240 254 / 0.6);
+  --input-border-color-error: var(--pink);
+  --input-border-radius: 8px;
+  --input-font-weight: 400;
+  --input-font-size: 14px;
+  --input-medium-font-size: 12px;
+  --input-large-font-size: 14px;
+  --input-medium-height: 40px;
+  --input-large-height: 65px;
+  --input-color: var(--text-color-one);
+  --input-color-disabled: var(--text-color-one);
+  --input-background-color: #f6f7fb;
+  --input-background-color-hover: #f8f9fa;
+  --input-background-color-active: #f8f9fa;
+  --input-background-color-disabled: #ffffff;
+  --input-label-font-weight-active: 400;
+  --input-label-font-size-active: 12px;
+  --input-label-medium-font-size: 12px;
+  --input-label-medium-font-size-active: 10px;
+  --input-label-large-font-size: 14px;
+  --input-label-large-font-size-active: 12px;
+  --input-label-color: var(--text-color-two);
+  --input-label-color-hover: var(--text-color-two);
+  --input-label-color-active: var(--text-color-two);
+  --input-label-color-disabled: rgb(100 124 159 / 0.6);
+  --input-icon-password-color: #bcc7cd;
+  --input-icon-password-color-hover: #969da4;
+}

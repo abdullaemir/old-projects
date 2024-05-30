@@ -1,0 +1,3 @@
+fragment GoodProductNameFields on GoodProductName {
+  product_name
+}

@@ -1,0 +1,6 @@
+:root {
+  --tooltip-background-color: rgba(4, 32, 47, 0.8);
+  --tooltip-border-rafius: 6px;
+  --tooltip-border-decoration: 7px;
+  --tooltip-text-color: var(--white);
+}

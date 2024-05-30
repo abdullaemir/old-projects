@@ -1,0 +1,7 @@
+#import "../fragments/ApriFields.graphql"
+
+query ($filter: ApriFilter, $limit: Int, $offset: Int, $orderBy: [OrderByInput]) {
+  apri(filter: $filter, limit: $limit, offset: $offset, orderBy: $orderBy) {
+    ...ApriFields
+  }
+}

@@ -1,0 +1,17 @@
+<svg width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_130_14527" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="68" height="68">
+<rect width="68" height="68" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_130_14527)">
+<path d="M19 43.7515C19 43.267 19.1758 42.799 19.4948 42.4345L21.637 39.9863C21.9734 39.6018 21.7004 39 21.1894 39V39C20.5325 39 20 38.4675 20 37.8106V37.5C20 36.6716 20.6716 36 21.5 36H26H30.5C31.3284 36 32 36.6716 32 37.5V37.8106C32 38.4675 31.4675 39 30.8106 39V39C30.2996 39 30.0266 39.6018 30.363 39.9863L32.5052 42.4345C32.8242 42.799 33 43.267 33 43.7515V49C33 50.1046 32.1046 51 31 51H21C19.8954 51 19 50.1046 19 49V43.7515Z" stroke="#E80061" stroke-width="2" stroke-linecap="round"/>
+<path d="M38 43.7515C38 43.267 38.1758 42.799 38.4948 42.4345L40.637 39.9863C40.9734 39.6018 40.7004 39 40.1894 39V39C39.5325 39 39 38.4675 39 37.8106V37.5C39 36.6716 39.6716 36 40.5 36H45H49.5C50.3284 36 51 36.6716 51 37.5V37.8106C51 38.4675 50.4675 39 49.8106 39V39C49.2996 39 49.0266 39.6018 49.363 39.9863L51.5052 42.4345C51.8242 42.799 52 43.267 52 43.7515V49C52 50.1046 51.1046 51 50 51H40C38.8954 51 38 50.1046 38 49V43.7515Z" stroke="#E80061" stroke-width="2" stroke-linecap="round"/>
+<path d="M56 51H17C14.2386 51 12 53.2386 12 56V56C12 58.7614 14.2386 61 17 61H40M56 61H47" stroke="#142269" stroke-width="2" stroke-linecap="round"/>
+<circle cx="17" cy="56" r="2" stroke="#142269" stroke-width="2" stroke-linecap="round"/>
+<path d="M22 56L56 56" stroke="#142269" stroke-width="2" stroke-linecap="round"/>
+<circle cx="26" cy="11" r="5" stroke="#142269" stroke-width="2" stroke-linecap="round"/>
+<circle cx="26" cy="11" r="2" fill="#142269"/>
+<path d="M30 8H46M46 14H30" stroke="#142269" stroke-width="2" stroke-linecap="round"/>
+<path d="M22 14V19H19.4142C18.5233 19 18.0771 20.0771 18.7071 20.7071L24 26M30 14V19H32.5858C33.4767 19 33.9229 20.0771 33.2929 20.7071L28 26" stroke="#142269" stroke-width="2" stroke-linecap="round"/>
+<rect x="24" y="22" width="4" height="8" rx="2" stroke="#142269" stroke-width="2" stroke-linecap="round"/>
+</g>
+</svg>

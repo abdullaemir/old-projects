@@ -1,0 +1,32 @@
+:root {
+  /* picker input style */
+  --date-picker-input-border-width: 1px;
+  --date-picker-input-border: var(--date-picker-input-border-width) solid #e7f0fe;
+  --date-picker-input-border-color-hover: #d9e6fb;
+  --date-picker-input-border-color-active: #e7f0fe;
+  --date-picker-input-border-color-disabled: #e7f0fe;
+  --date-picker-input-border-radius: 8px;
+  --date-picker-input-background-color: #f6f7fb;
+  --date-picker-input-background-color-hover: #f8f9fa;
+  --date-picker-input-background-color-active: #f8f9fa;
+  --date-picker-input-background-color-disabled: #ffffff;
+  --date-picker-input-font-weight: 400;
+  --date-picker-input-font-size: 14px;
+  --date-picker-input-color: var(--text-color-one);
+  --date-picker-input-color-disabled: #647c9f;
+  --date-picker-input-label-font-weight-active: 400;
+  --date-picker-input-label-font-size-active: 12px;
+  --date-picker-input-label-color: var(--text-color-two);
+  --date-picker-input-label-color-hover: var(--text-color-two);
+  --date-picker-input-label-color-active: var(--text-color-two);
+  --date-picker-input-label-color-disabled: rgb(100 124 159 / 0.6);
+
+  /* picker input button-calendar style */
+  --date-picker-input-button-color: #ffffff;
+  --date-picker-input-button-color-active: #009fe3;
+  --date-picker-input-button-icon-color: #bad1e6;
+  --date-picker-input-button-icon-color-active: #ffffff;
+  --date-picker-input-button-icon-color-disabled: #bad1e6;
+
+  /* picker select style */
+}

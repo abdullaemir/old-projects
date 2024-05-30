@@ -1,0 +1,20 @@
+:root {
+  /* Типографика */
+  --font-family: "Montserrat", sans-serif;
+  --font-size: 14px;
+  --font-weight: 500;
+  --line-height: 1.5;
+  --text-color-primary: var(--blue-darkest);
+  --text-color-secondary: var(--blue-light);
+  --text-color-tertiary: var(--blue-lighter);
+
+  /* Рамки */
+  --border-color-primary: var(--blue-lightest);
+
+  /* Позиционирование */
+  --z-index-header: 5;
+  --z-index-popup: 10;
+  --z-index-modal: 15;
+  --z-index-notification: 20;
+  --z-index-tray: 10;
+}

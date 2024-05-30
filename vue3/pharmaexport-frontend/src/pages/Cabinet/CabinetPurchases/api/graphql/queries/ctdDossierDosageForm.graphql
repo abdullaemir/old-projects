@@ -1,0 +1,7 @@
+#import "../fragments/CtdDossierDosageFormFields.graphql"
+
+query ($filter: CtdDossierFilter) {
+  ctdDossierDosageForm(filter: $filter, limit: 5, offset: 0) {
+    ...CtdDossierDosageFormFields
+  }
+}

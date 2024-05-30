@@ -1,0 +1,11 @@
+:root {
+  --checkbox-border-width: 1px;
+  --checkbox-border-color: #dddfe0;
+  --checkbox-border: var(--radio-border-width) solid var(--radio-border-color);
+  --checkbox-background-color: var(--white);
+  --checkbox-background-color-disabled: var(--blue-lightest);
+  --checkbox-checked-color: var(--blue-darkest);
+  --checkbox-checked-color-disabled: var(--blue-light);
+  --checkbox-label-color-disabled: var(--blue-light);
+  --checkbox-color-error: var(--pink);
+}

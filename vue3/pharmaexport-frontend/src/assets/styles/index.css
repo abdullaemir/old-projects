@@ -1,0 +1,11 @@
+@import "@pg/helpers/dist/index.css";
+@import "variables/index.css";
+@import "fonts.css";
+
+body {
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  font-family: var(--font-family);
+  color: var(--text-color-one);
+}

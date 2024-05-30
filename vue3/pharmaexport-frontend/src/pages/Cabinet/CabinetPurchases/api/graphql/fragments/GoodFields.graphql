@@ -1,0 +1,11 @@
+fragment GoodFields on Good {
+  id
+  eas_product_id
+  product_name
+  dosage_form
+  drug_form
+  delivery_period
+  therapy_area
+  estimated_price
+  currency
+}

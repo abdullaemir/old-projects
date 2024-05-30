@@ -1,0 +1,35 @@
+:root {
+  --input-file-border-color: #e7f0fe;
+  --input-file-border-color-hover: #d9e6fb;
+  --input-file-border-color-error: var(--pink);
+  --input-file-border-width: 1px;
+  --input-file-border-radius: 8px;
+  --input-file-font-size: 12px;
+  --input-file-font-weight: 500;
+  --input-file-line-height: 1.5;
+  --input-file-color: #647c9f;
+  --input-file-background-color: #f6f7fb;
+  --input-file-background-color-hover: #f8f9fa;
+
+  --input-file-label-color: #8292a1;
+  --input-file-label-color-hover: #8292a1;
+
+  --input-file-separator-background-color: #aebed6;
+
+  --input-file-button-font-weight: 500;
+  --input-file-button-color: #ffffff;
+  --input-file-button-background-color: #aebed6;
+  --input-file-button-background-color-hover: #647c9f;
+
+  --input-file-list-icon-background-color: #aebed6;
+  --input-file-list-icon-cross-background-color: #f6f7fb;
+  --input-file-list-scrollbar-thumb-background-color: #aebed6;
+  --input-file-list-scrollbar-thumb-background-color-hover: #647c9f;
+
+  --input-file-drag-border-color: #1d89ed;
+  --input-file-drag-border-width: 2px;
+  --input-file-drag-color: #ffffff;
+  --input-file-drag-background-color: rgb(29 137 237 / 0.15);
+  --input-file-drag-block-background-color: #1d89ed;
+  --input-file-drag-icon-background-color: #ffffff;
+}

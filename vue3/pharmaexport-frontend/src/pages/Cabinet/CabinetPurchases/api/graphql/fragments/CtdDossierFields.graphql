@@ -1,0 +1,8 @@
+fragment CtdDossierFields on CtdDossier {
+  id
+  product_name
+  dosage_form
+  therapy_area
+  estimated_price
+  currency
+}

@@ -1,0 +1,9 @@
+#import "../fragments/UserInviteFields.graphql"
+
+mutation ($email: String!) {
+  userInviteCreate(email: $email) {
+    user_invite {
+      ...UserInviteFields
+    }
+  }
+}

@@ -1,0 +1,7 @@
+#import "../fragments/GoodFields.graphql"
+
+query ($filter: GoodFilter, $limit: Int, $offset: Int, $orderBy: [OrderByInput]) {
+  good(filter: $filter, limit: $limit, offset: $offset, orderBy: $orderBy) {
+    ...GoodFields
+  }
+}

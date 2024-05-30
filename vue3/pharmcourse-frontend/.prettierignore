@@ -1,0 +1,8 @@
+# Folders
+dist
+src/components/base
+
+# Files
+src/api/graphql/schema.graphql
+index.html
+package-lock.json

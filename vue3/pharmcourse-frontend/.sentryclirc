@@ -1,0 +1,8 @@
+[defaults]
+org=sentry
+url=https://sentry.phz.team/
+project=pharmcourse-frontend-vue
+
+[auth]
+token=44eef8717dbc46f9946d388c4513110961e0c076655e46f98846a94969415117
+dsn=https://d44571e04bac4dd59d849c1355bf4fb2@sentry.phz.team/11

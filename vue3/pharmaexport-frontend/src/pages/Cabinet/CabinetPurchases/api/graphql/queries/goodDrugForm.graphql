@@ -1,0 +1,7 @@
+#import "../fragments/GoodDrugFormFields.graphql"
+
+query ($filter: GoodFilter) {
+  goodDrugForm(filter: $filter, limit: 5, offset: 0) {
+    ...GoodDrugFormFields
+  }
+}

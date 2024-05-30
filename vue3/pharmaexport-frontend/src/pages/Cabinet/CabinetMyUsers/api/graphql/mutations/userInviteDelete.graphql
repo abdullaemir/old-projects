@@ -1,0 +1,3 @@
+mutation ($invite_id: Int!) {
+  userInviteDelete(invite_id: $invite_id)
+}
